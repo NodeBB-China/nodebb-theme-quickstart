@@ -1,10 +1,45 @@
 {
   "name": "nodebb-theme-quickstart",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Enter a description here",
   "main": "theme.less",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "keywords": [
 
   ],
-  "license": "MIT"
+  "author": "a632079 <a632079@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodebb-china/nodebb-theme-quickstart/issues"
+  },
+  "homepage": "https://github.com/nodebb-china/nodebb-theme-quickstart",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-angular": "^7.1.2",
+    "eslint": "^6.2.2 ",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0"
+  },
+  "nbbpm": {
+    "compatibility": "^1.13"
+  }
 }

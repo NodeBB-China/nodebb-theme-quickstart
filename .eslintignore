@@ -1,0 +1,5 @@
+# All client JS
+/lib/*.js
+
+# All Template
+*.tpl
